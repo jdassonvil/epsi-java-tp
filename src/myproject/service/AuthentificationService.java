@@ -2,7 +2,6 @@ package myproject.service;
 
 import myproject.data.MockUserData;
 import myproject.data.UserDataAccess;
-import myproject.exception.UnknownUserException;
 import myproject.model.User;
 
 public class AuthentificationService {
@@ -16,7 +15,7 @@ public class AuthentificationService {
 			utilisateur = userDataAccess.findUser(username);
 			return utilisateur.getPassword().equals(password);
 
-		} catch (UnknownUserException e) {
+		} catch (Exception e) {
 			return false;
 		}
 		
