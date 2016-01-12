@@ -1,11 +1,11 @@
 package myproject.model;
 
-public class Utilisateur {
+public class User {
 
 	private String username;
 	private String password;
 
-	public Utilisateur(String username, String password) {
+	public User(String username, String password) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -40,7 +40,7 @@ public class Utilisateur {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Utilisateur other = (Utilisateur) obj;
+		User other = (User) obj;
 		if (password == null) {
 			if (other.password != null)
 				return false;

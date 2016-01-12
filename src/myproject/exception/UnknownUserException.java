@@ -1,6 +1,6 @@
 package myproject.exception;
 
-public class UtilisateurInconnuException extends Exception{
+public class UnknownUserException extends Exception{
 
 	private static final long serialVersionUID = 1L;
 

@@ -1,21 +1,21 @@
 package myproject.service;
 
-import myproject.data.DonnéesUtilisateur;
-import myproject.exception.UtilisateurInconnuException;
-import myproject.model.Utilisateur;
+import myproject.data.UserData;
+import myproject.exception.UnknownUserException;
+import myproject.model.User;
 
 public class AuthentificationService {
 	
-	private DonnéesUtilisateur donnéesUtilisateur = new DonnéesUtilisateur();
+	private UserData donnéesUtilisateur = new UserData();
 	
 	public boolean login(String username, String password){
 		
-		Utilisateur utilisateur;
+		User utilisateur;
 		try {
 			utilisateur = donnéesUtilisateur.trouverUtilisateur(username);
 			return utilisateur.getPassword().equals(password);
 
-		} catch (UtilisateurInconnuException e) {
+		} catch (UnknownUserException e) {
 			return false;
 		}
 		
