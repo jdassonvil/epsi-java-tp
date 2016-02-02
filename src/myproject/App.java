@@ -6,7 +6,7 @@ public class App {
 	
 	public static void main(String[] args){
 		
-		Console.promptLogin();
+		Console.promptMenu();
 	}
 
 }
